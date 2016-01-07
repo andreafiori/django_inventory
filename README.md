@@ -8,7 +8,7 @@ Installation
 
 - Install [Python](http://www.python.org/) (if you are using Linux, you already have Python installed)
 - Install [Django](http://www.djangoproject.com)
-- Install [Pip]() to manage dependencies
+- Install [Pip](https://pip.pypa.io/en/stable/installing/) to manage dependencies
 
 Database
 -----------------------------
@@ -40,6 +40,14 @@ To run all unit test:
 
 	python manage.py test
 
+Deployment
+-----------------------------
+
+Here is a simple list about a Django application deployment:
+
+- Be sure to upload the files on your server and have Django installed on your server
+- Set debug mode to false: on settings.py simply change DEBUG = False
+
 TODO
 -----------------------------
 
@@ -50,12 +58,4 @@ Some next steps about practicing web development with Python:
 - Admin area with many-to-many data relationships
 - Admin area template customization
 - Using Django REST framework
-
-Deployment
------------------------------
-
-Here is a simple list about a Django application deployment:
-
-- Be sure to upload the files on your server and have Django installed on your server
-- Set debug mode to false: on settings.py simply change DEBUG = False
 
