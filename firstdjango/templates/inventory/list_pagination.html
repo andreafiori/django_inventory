@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<table class="table table-bordered">
+		<tr>
+			<th>Title</th>
+			<th>Description</th>
+			<th>Amount</th>
+		</tr>
+		{% for item in items %}
+		<tr>
+			<td><p>{{ item.title|upper }}</p></td>
+			<td><p>{{ item.description }}</p></td>
+			<td><p>{{ item.amount }}</p></td>
+		</tr>
+		{% endfor %}
+	</table>
+
+	<!-- Pagination -->
+	<nav>
+		<ul class="pager">
+			{% if items.has_previous %}
+			<li>
+				<a href="?page={{ items.previous_page_number }}">Previous</a>
+			</li>
+			{% endif %}
+
+			<li>
+				Page {{ items.number }} of {{ items.paginator.num_pages }}.
+			</li>
+
+			{% if items.has_next %}
+			<li>
+				<a href="?page={{ items.next_page_number }}" title="Go to the next page">Next</a>
+			</li>
+			{% endif %}
+		</ul>
+	</nav>
+{% endblock %}
