@@ -12,4 +12,7 @@ urlpatterns = [
     url(r'^contact/$', contact_view.contact, name='contact'),
     # Admin area
     url(r'^admin/', include(admin.site.urls)),
+    # REST API
+    url(r'^api/v1/items/$', views.item_collection, name='item_collection'),
+    url(r'^api/v1/items/(?P<pk>[0-9]+)$', views.item_element, name='item_element'),
 ]
