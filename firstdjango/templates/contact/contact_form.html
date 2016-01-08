@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load bootstrap %}
+
+{% block content %}
+<h2>Contact Us</h2>
+<p>Send us a message.</p>
+<form action="" method="post" role="form" class="form-horizontal">
+	{% csrf_token %}
+	{{ form|bootstrap_horizontal }}
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-primary">Send</button>
+		</div>
+	</div>
+</form>
+{% endblock %}

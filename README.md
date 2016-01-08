@@ -10,6 +10,14 @@ Installation
 - Install [Django](http://www.djangoproject.com)
 - Install [Pip](https://pip.pypa.io/en/stable/installing/) to manage dependencies
 
+Features
+-----------------------------
+
+Maybe you will need to install these features I have included in the project.
+
+[Bootstrap Form App](https://github.com/tzangms/django-bootstrap-form)
+[Minify HTML](https://github.com/cobrateam/django-htmlmin)
+
 Database
 -----------------------------
 

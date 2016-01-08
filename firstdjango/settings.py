@@ -37,7 +37,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrapform',
     'inventory',
+    'contact',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,3 +107,20 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'firstdjango', 'static'),
 )
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+DEFAULT_FROM_EMAIL = 'noreply@mywebsite.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False 
+EMAIL_PORT = 1025
+
+MIDDLEWARE_CLASSES = (
+  'django.middleware.cache.UpdateCacheMiddleware',
+  'htmlmin.middleware.HtmlMinifyMiddleware',
+  # addtional classes
+  # 'django.middleware.cache.FetchFromCacheMiddleware',
+  # 'htmlmin.middleware.MarkRequestMiddleware',
+)
+
+HTML_MINIFY = True
