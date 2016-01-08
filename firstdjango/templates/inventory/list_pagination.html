@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+	<ol class="breadcrumb">
+		<li><a href="{% url 'index' %}" title="Back to thte home page">Home</a></li>
+		<li class="active">Items</li>
+	</ol>
 	<table class="table table-bordered">
 		<tr>
 			<th>Title</th>

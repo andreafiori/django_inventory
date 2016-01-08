@@ -25,7 +25,7 @@ def items_pagination(request):
 
 def items_list(request):
     items = Item.objects.exclude(amount=0)
-    return render(request, 'inventory/index.html', {'items': items})
+    return render(request, 'inventory/item_list.html', {'items': items})
 
 def item_detail(request, id):
     try:

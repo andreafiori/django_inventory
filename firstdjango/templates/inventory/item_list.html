@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+	<ol class="breadcrumb">
+		<li><a href="{% url 'index' %}" title="Back to the home page">Home</a></li>
+		<li class="active">Items</li>
+	</ol>
 	<h3>Items in stock</h3>
 	<ul>
 	{% for item in items %}

@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<a href="{% url 'index' %}">Back to the item list</a>
-	<h3>{{ item.title|capfirst }}</h3>
-	<p>{{ item.amount }} currently in stock</p>
-	<h4>Description:</h4>
-	<p>{{ item.description }}</p>
+	<ol class="breadcrumb">
+		<li><a href="{% url 'index' %}" title="Back to thte home page">Home</a></li>
+		<li><a href="{% url 'items_list' %}" title="Items list">Items</a></li>
+		<li class="active">{{ item.title|capfirst }}</li>
+	</ol>
+	<diV>
+		<h3>{{ item.title|capfirst }}</h3>
+		<p>{{ item.amount }} currently in stock</p>
+		<h4>Description:</h4>
+		<p>{{ item.description }}</p>
+	</diV>
 {% endblock %}

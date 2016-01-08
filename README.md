@@ -62,8 +62,7 @@ TODO
 Some next steps about practicing web development with Python:
 
 - Create a Categories table
-- Switch to MySQL and use joins
+- Switch to MySQL and use joins (with a category table for example)
 - Admin area with many-to-many data relationships
 - Admin area template customization
 - Using Django REST framework
-

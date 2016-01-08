@@ -2,6 +2,11 @@
 {% load bootstrap %}
 
 {% block content %}
+<ol class="breadcrumb">
+	<li><a href="{% url 'index' %}" title="Back to thte home page">Home</a></li>
+	<li class="active">Contact</li>
+</ol>
+
 <h2>Contact Us</h2>
 <p>Send us a message.</p>
 <form action="" method="post" role="form" class="form-horizontal">
